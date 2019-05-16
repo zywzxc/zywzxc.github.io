@@ -2,716 +2,1199 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>我的网页</title>
+	<title>我的京东网页</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jd1.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/lb.js"></script>
+	<script type="text/javascript" src="js/lazyload.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="./img/favicon.ico">
 </head>
 <body>
 <div>
-	<header class="header show" id="header">
-		<div class="ht">
-			<a href=""><img src="img/topbanner.jpg" alt=""></a>
-		</div>
-		<div class="ht-right">x</div>
-	</header>
-	
-	<div class="box">
-		<nav>
-			<div class="du">
-				<ul>
-					<li class="uu">
-						<i>
-							<img src="img/dizhi.png" class="tu"/>
-						</i>
-						<a href="#">北京</a>
-					</li>
-					<li><a href="#">你好，请登录</a></li>
-					<li>|</li>
-					<li><a href="#">我的订单</a></li>
-					<li>|</li>
-					<li class="wd" id="wd">
-						<a href="#">我的京东<span>×</span></a>
-					</li>
-					<li>|</li>
-					<li><a href="#">京东会员</a></li>
-					<li>|</li>
-					<li class="wd" id="qy"><a href="#">企业采购<span>×</span></a></li>
-					<li>|</li>
-					<li class="wd" id="kh"><a href="#">客户服务<span>×</span></a></li>
-					<li>|</li>
-					<li class="wd" id="dh"><a href="#">网站导航<span>×</span></a></li>
-					<li>|</li>
-					<li>
-						<a href="#">手机京东</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<div class="s">
-			<div class="search-input">
-				<input type="text" value=""/>
-				<img src="img/zhaoxiangji.png" id="zxj"/>
-				<button><img src="img/ss.png" id="ss"/></button>
-			</div>
-			
-			<div class="search-car">
-	            <a href="#">我的购物车</a>
-	            <i class="search-car-gwc"></i>
-	            <p class="search-car-mag">0</p>
-        	</div>
-			
-			<div class="search-moreAlink">
-				<ul>
-					<li>百元智能家</li>
-					<li>199减100</li>
-					<li>爆款手机</li>
-					<li>鲜放假</li>
-					<li>低至5折</li>
-					<li>小米mix3</li>
-				</ul>
+	<div class="scroll_top">
+		<div class="scr_t" id="scr_t">
+			<div class="sc_top">
+				<input type="text" placeholder="搜索框"/>
+				<button>
+					<img src="img/ss.png" class="but" alt="">
+				</button>
 			</div>
 		</div>
-		<div class="s1">
-			<ul>
-				<li><a href="#">秒杀</a></li>
-				<li><a href="#">优惠券</a></li>
-				<li><a href="#">PLUS会员</a></li>
-				<li><a href="#">闪购</a></li>
-				<li class="su1">|</li>
-				<li><a href="#">拍卖</a></li>
-				<li><a href="#">京东时尚</a></li>
-				<li><a href="#">京东超市</a></li>
-				<li><a href="#">京东生鲜</a></li>
-				<li class="su2">|</li>
-				<li><a href="#">全球购</a></li>
-				<li><a href="#">京东金融</a></li>
+	</div>
+	<!-- 头部 -->
+	<div class="d_header">
+		<header class="header show" id="header">
+			<div class="ht">
+				<a href=""><img src="img/topbanner.jpg" alt=""></a>
+			</div>
+			<div class="ht-right">x</div>
+		</header>
+	</div>
+
+	<!-- 导航 -->
+	<nav>
+		<div class="d_nav">
+			<ul class="nav_fl">
+				<li class="nav_fl_li">
+					<i><img src="img/dizhi.png" class="dizhi"/></i>
+					<a href="#">北京</a>
+				</li>
+				<div class="nav_bj">
+					<div class="nav_bj_t">
+						<ul>
+							<li>
+								<a href="#">北京</a>
+								<a href="#">上海</a>
+								<a href="#">天津</a>
+								<a href="#">重庆</a>
+								<a href="#">河北</a>
+							</li>
+							<li>
+								<a href="#">山西</a>
+								<a href="#">河南</a>
+								<a href="#">辽宁</a>
+								<a href="#">吉林</a>
+								<a href="#">黑龙江</a>
+							</li>
+							<li>
+								<a href="#">内蒙古</a>
+								<a href="#">江苏</a>
+								<a href="#">山东</a>
+								<a href="#">安徽</a>
+								<a href="#">浙江</a>
+							</li>
+							<li>
+								<a href="#">福建</a>
+								<a href="#">湖北</a>
+								<a href="#">湖南</a>
+								<a href="#">广东</a>
+								<a href="#">广西</a>
+							</li>
+							<li>
+								<a href="#">江西</a>
+								<a href="#">四川</a>
+								<a href="#">海南</a>
+								<a href="#">贵州</a>
+								<a href="#">云南</a>
+							</li>
+							<li>
+								<a href="#">西藏</a>
+								<a href="#">陕西</a>
+								<a href="#">甘肃</a>
+								<a href="#">青海</a>
+								<a href="#">宁夏</a>
+							</li>
+							<li>
+								<a href="#">新疆</a>
+								<a href="#">港澳</a>
+								<a href="#">台湾</a>
+								<a href="#">钓鱼岛</a>
+								<a href="#">海外</a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav_bj_m">
+						<div class="nmd"></div>
+						<p>地区专享版本</p>
+						<p class="p1">中國港澳</p>
+					</div>
+				</div>
 			</ul>
-		</div>
-		
-		<div class="s2">
-			<div><h4><a href="#">家用电器</a></h4></div>
-			<div><h4><a href="#">手机</a>/<a href="#">运营商</a>/<a href="#">数码</a></h4></div>
-			<div><h4><a href="#">电脑</a>/<a href="#">办公</a></h4></div>
-			<div><h4><a href="#">家居</a>/<a href="#">家具</a>/<a href="#">家装</a>/<a href="#">厨具</a></h4></div>
-			<div><h4><a href="#">男装</a>/<a href="#">女装</a>/<a href="#">童装</a>/<a href="#">内衣</a></h4></div>
-			<div><h4><a href="#">美妆</a>/<a href="#">个护清洁</a>/<a href="#">宠物</a></h4></div>
-			<div><h4><a href="#">女鞋</a>/<a href="#">箱包</a>/<a href="#">钟表</a>/<a href="#">珠宝</a></h4></div>
-			<div><h4><a href="#">男鞋</a>/<a href="#">运动</a>/<a href="#">户外</a></h4></div>
-			<div><h4><a href="#">房产</a>/<a href="#">汽车</a>/<a href="#">汽车用品</a></h4></div>
-			<div><h4><a href="#">母婴</a>/<a href="#">玩具乐器</a></h4></div>
-			<div><h4><a href="#">食品</a>/<a href="#">酒类</a>/<a href="#">生鲜</a>/<a href="#">特产</a></h4></div>
-			<div><h4><a href="#">艺术</a>/<a href="#">礼品鲜花</a>/<a href="#">农资绿植</a></h4></div>
-			<div><h4><a href="#">医药保健</a>/<a href="#">计生情趣</a></h4></div>
-			<div><h4><a href="#">图书</a>/<a href="#">音像</a>/<a href="#">电子书</a></h4></div>
-			<div><h4><a href="#">机票</a>/<a href="#">酒店</a>/<a href="#">旅游</a>/<a href="#">生活</a></h4></div>
-			<div><h4><a href="#">理财</a>/<a href="#">众筹</a>/<a href="#">白条</a>/<a href="#">保险</a></h4></div>
-			<div><h4><a href="#">安装</a>/<a href="#">维修</a>/<a href="#">清洗保养</a></h4></div>
-			<div><h4><a href="#">工业品</a></h4></div>
-		</div>
-		
-		<div class="ulAll" id="ulAll">
-			<div class="ulAll_top" id="ulAll_top">
-				<ul id="ul">
-					<li><img src="img/t1.jpg" width="680"/></li>
-					<li><img src="img/t2.jpg" width="680"/></li>
-					<li><img src="img/t3.jpg" width="680"/></li>
-					<li><img src="img/t4.jpg" width="680"/></li>
-					<li><img src="img/t5.jpg" width="680"/></li>
-					<li><img src="img/t6.jpg" width="680"/></li>
-					<li><img src="img/t7.jpg" width="680"/></li>
-					<li><img src="img/t8.jpg" width="680"/></li>
-				</ul>
-				<ol>
-					
-				</ol>
-				<div id="arr">
-            		<span id="left"><</span>
-            		<span id="right">></span>
-        		</div>
-			</div>
-		</div>
-		
-		<div class="s3">
-			<div class="s3_top">
-				<div class="s3_div1"><img src="img/no_login.jpg" class="s3_img"/></div>
-				<div class="s3_div2">
-					<p class="s3_p1">Hi~欢迎来到京东！</p>
-					<p class="s3_p2"><a href="#">登录</a><a href="#">注册</a></p>
-				</div>
-				<div class="s3_div3">
-					<span class="s3_span1">新人福利</span>
-					<span class="s3_span2">PLUS会员</span>
-				</div>
-			</div>
-			<div class="s3_middle">
-				<ul>
-					<li id="du1"><strong>促销</strong></li>
-					<li id="du2"><strong>公告</strong></li>
-					<li class="sm_p">更多</li>
-				</ul>
-				<div class="s3_box">
-					<div class="s3_div01 show">
-						<ul>
-							<li><a href="#">抢笔记本1111元神券！</a></li>
-							<li><a href="#">极米Play X 陪你随时看电影</a></li>
-							<li><a href="#">英特尔 电竞主机直降3000元</a></li>
-							<li><a href="#">天际厨电感恩专场豪礼免费拿</a></li>
+			<ul class="nav_fr">
+				<li><a href="#">你好，请登录</a></li>
+				<li>|</li>
+				<li><a href="#">我的订单</a></li>
+				<li>|</li>
+				<li class="nav_fr_li" id="wd">
+					<a href="#">我的京东</a>
+					<span><img src="img/xjt.png" alt=""></span>
+					<div class="myjd">
+						<div class="myjd_n1">
+							<ul class="myjd_u1">
+								<li>
+									<a href="#">待处理订单</a>
+									<a href="#">消息</a>
+								</li>
+								<li>
+									<a href="#">返修退换货</a>
+									<a href="#">我的问答</a>
+								</li>
+								<li>
+									<a href="#" class="myjd_ul_a">降价商品</a>
+									<a href="#">我的关注</a>
+								</li>
+							</ul>
+						</div>
+						<div class="myjd_n3">
+							<div class="myjd_n3_f"></div>
+							<ul class="myjd_u2">
+								<li>
+									<a href="#">我的京豆</a>
+									<a href="#">我的优惠券</a>
+								</li>
+								<li>
+									<a href="#" class="wdbt">我的白条</a>
+									<a href="#">我的理财</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>|</li>
+				<li><a href="#">京东会员</a></li>
+				<li>|</li>
+				<li class="nav_fr_li" id="qy">
+					<a href="#">企业采购</a>
+					<span><img src="img/xjt.png" alt=""></span>
+					<div class="qycg">
+						<ul class="qycg_ul">
+							<li>
+								<a href="#">企业购</a>
+								<a href="#">商用场景馆</a>
+							</li>
+							<li>
+								<a href="#">工业品</a>
+								<a href="#">礼品卡</a>
+							</li>
 						</ul>
 					</div>
-					<div class="s3_div02 hide">
-						<ul>
-							<li><a href="#">京东图书勋章体系改版公告</a></li>
-							<li><a href="#">京东PLUS会员权益更新及会费调整</a></li>
-							<li><a href="#">京东启用全新客服电话“950618”</a></li>
-							<li><a href="#">关于召回普利司通（天津）轮胎有限公司2个规格乘用车轮胎的公告</a></li>
+				</li>
+				<li>|</li>
+				<li class="nav_fr_li" id="kh">
+					<a href="#">客户服务</a>
+					<span><img src="img/xjt.png" alt=""></span>
+					<div class="khfw">
+						<div class="khfw_d1">
+							<ul class="khfw_u1">
+								<li class="khfwli">客户</li>
+								<li>
+									<a href="#">帮助中心</a>
+									<a href="#">售后服务</a>
+								</li>
+								<li>
+									<a href="#">在线客服</a>
+									<a href="#">意见建议</a>
+								</li>
+								<li>
+									<a href="#">电话客服</a>
+									<a href="#">客服邮箱</a>
+								</li>
+								<li>
+									<a href="#">金融咨询</a>
+									<a href="#">全球售客服</a>
+								</li>
+							</ul>
+						</div>
+						<div class="khfw_d2">
+							<div class="khfw_f"></div>
+							<ul class="khfw_u2">
+								<li class="khfwli">商户</li>
+								<li>
+									<a href="#">合作招商</a>
+									<a href="#">成长中心</a>
+								</li>
+								<li>
+									<a href="#">商家后台</a>
+									<a href="#">京麦工作台</a>
+								</li>
+								<li>
+									<a href="#">商家帮助</a>
+									<a href="#">规则平台</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>|</li>
+				<li class="nav_fr_li" id="dh">
+					<a href="#">网站导航</a>
+					<span><img src="img/xjt.png" alt=""></span>
+					<div class="wzdh">
+						<div class="wzdh_s1">
+							<ul>
+								<li class="khfwli1">特色主题</li>
+								<li>
+									<a href="#">京东试用</a>
+									<a href="#">京东金融</a>
+									<a href="#">全球售</a>
+									<a href="#">国际站</a>
+								</li>
+								<li>
+									<a href="#">京东会员</a>
+									<a href="#">京东预售</a>
+									<a href="#">买什么</a>
+									<a href="#">俄语站</a>
+								</li>
+								<li>
+									<a href="#">装机大师</a>
+									<a href="#">0元评测</a>
+									<a href="#">港澳售</a>
+									<a href="#">优惠券</a>
+								</li>
+								<li>
+									<a href="#">秒杀</a>
+									<a href="#">闪购</a>
+									<a href="#">印尼站</a>
+									<a href="#">京东金融科技</a>
+								</li>
+								<li>
+									<a href="#">陪伴计划</a>
+									<a href="#">出海招商</a>
+									<a href="#">拍拍二手</a>
+								</li>
+							</ul>
+						</div>
+						<div class="wzdh_sx"></div>
+						<div class="wzdh_s2">
+							<ul>
+								<li class="khfwli1">行业频道</li>
+								<li>
+									<a href="#">手机</a>
+									<a href="#">智能数码</a>
+									<a href="#">玩3C</a>
+								</li>
+								<li>
+									<a href="#" class="wzdh_s2_ry1">电脑办公</a>
+									<a href="#" class="wzdh_s2_ry2">家用电器</a>
+									<a href="#" class="wzdh_s2_ry3">京鱼座智能</a>
+								</li>
+								<li>
+									<a href="#">服装城</a>
+									<a href="#" class="wzdh_s2_ry4">京东生鲜</a>
+									<a href="#">家装城</a>
+								</li>
+								<li>
+									<a href="#">母婴</a>
+									<a href="#">食品</a>
+									<a href="#" class="wzdh_s2_ry5">农资频道</a>
+								</li>
+								<li>
+									<a href="#">整车</a>
+									<a href="#">图书</a>
+									<a href="#" class="wzdh_s2_ry5">劳动防护</a>
+								</li>
+							</ul>
+						</div>
+						<div class="wzdh_sx"></div>
+						<div class="wzdh_s3">
+							<ul>
+								<li class="khfwli1">生活服务</li>
+								<li>
+									<a href="#">京东众筹</a>
+									<a href="#">白条</a>
+									<a href="#">京东金融App</a>
+								</li>
+								<li>
+									<a href="#">京东小金库</a>
+									<a href="#" class="wzdh_s2_ry6">理财</a>
+									<a href="#">话费</a>
+								</li>
+								<li>
+									<a href="#">水电煤</a>
+									<a href="#" class="wzdh_s2_ry7">彩票</a>
+									<a href="#">旅行</a>
+								</li>
+								<li>
+									<a href="#">机票酒店</a>
+									<a href="#">电影院</a>
+									<a href="#">京东到家</a>
+								</li>
+								<li>
+									<a href="#">游戏</a>
+									<a href="#" class="wzdh_s2_ry8">拍拍回收</a>
+								</li>
+							</ul>
+						</div>
+						<div class="wzdh_sx"></div>
+						<div class="wzdh_s4">
+							<ul>
+								<li class="khfwli1">更多精选</li>
+								<li>
+									<a href="#">合作招商</a>
+									<a href="#">京东通信</a>
+									<a href="#">京东E卡</a>
+								</li>
+								<li>
+									<a href="#">企业采购</a>
+									<a href="#">服务市场</a>
+									<a href="#">办公生活馆</a>
+								</li>
+								<li>
+									<a href="#">乡村招募</a>
+									<a href="#">校园加盟</a>
+									<a href="#">京友邦</a>
+								</li>
+								<li>
+									<a href="#">京东社区</a>
+									<a href="#">游戏社区</a>
+									<a href="#">知识产权维权</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>|</li>
+				<li>
+					<a href="#">手机京东</a>
+				</li>
+				
+				
+				
+			</ul>				
+		</div>
+	</nav>
+
+	<!-- 搜索框 -->
+	<div class="h_header">
+		<div class="h_header_m">
+			<div class="l_img">
+				<img src="img/jd1.gif" alt="">
+			</div>
+			<div class="r_s">
+				<div class="r_s_top">
+					<div class="r_s_l">
+						<input type="text" placeholder="奥利奥"/>
+						<button>
+							<img src="img/ss.png" class="bt" alt="">
+						</button>
+						<ul class="r_s_u">
+							<li><a href="#">百元智能家</a></li>
+							<li><a href="#">199减100</a></li>
+							<li><a href="#">爆款手机</a></li>
+							<li><a href="#">鲜放假</a></li>
+							<li><a href="#">低至5折</a></li>
+							<li><a href="#">小米mix3</a></li>
 						</ul>
 					</div>
-				</div>
-			</div>
-			<div class="s3_bottom" id="s3_bottom">
-	                <ul id="s3_bul">
-	                    <li id="m-icon1">
-	                        <a href="#">
-	                            <i class="m-icon1"></i>
-	                            话费
-	                        </a>
-	                    </li>
-	                    <li id="m-icon2">
-	                        <a href="#">
-	                            <i class="m-icon2" id="m-icon2"></i>
-	                            机票
-	                        </a>
-	                    </li>
-	                    <li id="m-icon3">
-	                        <a href="#">
-	                            <i class="m-icon3" id="m-icon3"></i>
-	                            电影票
-	                        </a>
-	                    </li>
-	                    <li id="m-icon4">
-	                        <a href="#">
-	                            <i class="m-icon4" id="m-icon4"></i>
-	                            游戏
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <i class="m-icon5"></i>
-	                            彩票
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <i class="m-icon6"></i>
-	                            加油卡
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <i class="m-icon7"></i>
-	                            酒店
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <i class="m-icon8"></i>
-	                            火车
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <i class="m-icon9"></i>
-	                            众筹
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <i class="m-icon10"></i>
-	                            理财
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a class="show" href="#">
-	                            <i class="m-icon11"></i>
-	                            礼品卡
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a class="spe" href="#">
-	                            <i class="m-icon12"></i>
-	                            白条
-	                        </a>
-	                    </li>
-	                </ul>
-			</div>
-			<div class="sc hide" id="sc">x</div>
-			<div class="hz_box">
-			
-			<div class="hf hide" id="hf">
-				<ul>
-					<li id="hfcz">话费充值</li>
-					<li id="llcz">流量充值</li>
-					<li id="tcbg">套餐变更</li>
-				</ul>
-				<div class="hf_box">
-					<div class="hfcz show">
-						<ul>
-							<li>
-								号码	<input type="text" value="请输入手机号" class="input_hm"/>
-							</li>
-							<li>
-								面值
-								<select name="" id="mz">
-									<option value="">10元</option>
-									<option value="">20元</option>
-									<option value="">30元</option>
-									<option value="">50元</option>
-									<option value="">100元</option>
-									<option value="">200元</option>
-									<option value="">300元</option>
-									<option value="">500元</option>
-								</select>
-							</li>
-							<li class="y">￥98.0-￥100</li>
-							<li class="kc">快速充值</li>
-							<li>抢90减50元话费劵</li>
-						</ul>
-					</div>
-					<div class="llcz hide">
-					<ul>
-						<li>
-							号码	<input type="text" value="移动/联通/电信" class="input_hm"/>
-						</li>
-						<li>
-							流量
-							<select name="" id="l">
-								<option value="">全国</option>
-								<option value="">省内</option>
-							</select>
-							<select name="" id="m">
-								<option value="">50M</option>
-								<option value="">100M</option>
-								<option value="">200M</option>
-								<option value="">300M</option>
-								<option value="">500M</option>
-							</select>
-						</li>
-						<li class="y">￥7.5-￥10.0</li>
-						<li class="kc">快速充值</li>
-						<li class="czk">App Store充值卡</li>
-					</ul>
-				</div>
-				<div class="tcbg hide">
-					<ul>
-						<li>
-							号码	<input type="text" value="支持部分地区移动" class="input_hm"/>
-						</li>
-						<li>
-							月费
-							<select name="" id="yf">
-								<option value="">38元</option>
-								<option value="">48元</option>
-								<option value="">58元</option>
-								<option value="">88元</option>
-								<option value="">138元</option>
-								<option value="">158元</option>
-								<option value="">238元</option>
-								<option value="">268元</option>
-								<option value="">338元</option>
-								<option value="">588元</option>
-							</select>
-						</li>
-						<li class="fzll">500分钟1G流量</li>
-						<li class="kc">办理变更</li>
-						<li class="hot"><strong>HOT</strong></li>
-						<li class="czk">中国联通199全国不限量 </li>
-					</ul>
-				</div>
-				</div>
-			</div>
-			
-			<div class="jp show" id="jp">
-				<ul>
-					<li id="gnjp">国内机票</li>
-					<li id="gjgat">国际/港澳台</li>
-					<li id="th">特惠</li>
-				</ul>
-				<div class="jp_box">
-					<div class="gnjp show">
-						<ul>
-							<li class="radio1">
-								<input type="radio" name="r" checked="checked"  class="checked"/><span>单程</span><input type="radio" name="r" class="checked"/><span>往返</span>
-							</li>
-							<li>
-								出发	<input type="text" value="城市" class="input_hm1"/>
-								到达	<input type="text" value="城市" class="input_hm"/>
-							</li>
-							<li>
-								日期	<input type="text" value="日期" class="input_hm"/>
-							</li>
-							<li class="kc">机票查询</li>
-							<li class="rmjp">当季热门特惠机票 </li>
-						</ul>
-						<span><img src="img/sx.png" class="jhtp"/></span>
+					<div class="r_s_r">
+						<p></p>
+						<span>我的购物车</span>
+						<i class="r_i1">
+							<i class="r_i2">0</i>
+						</i>
 						
 					</div>
-					<div class="gjgat hide">
-						<ul>
-							<li class="radio1">
-								<input type="radio" name="r" checked="checked"  class="checked"/><span>单程</span><input type="radio" name="r" class="checked"/><span>往返</span>
-							</li>
-							<li>
-								出发	<input type="text" value="城市" class="input_hm1"/>
-								到达	<input type="text" value="城市" class="input_hm"/>
-							</li>
-							<li>
-								日期	<input type="text" value="日期" class="input_hm"/>
-							</li>
-							<li class="kc">机票查询</li>
-							<li class="rmjp">国际机票任性搜 </li>
-						</ul>
-						<span><img src="img/sx.png" class="jhtp"/></span>
-					</div>
-					<div class="th hide">
-						<span><img src="img/thtp1.jpg"/></span><span><img src="img/thtp2.jpg"/></span>
-					</div>
-				<div class="tcbg hide">
-					<ul>
-						<li>
-							号码	<input type="text" value="支持部分地区移动" class="input_hm"/>
-						</li>
-						<li>
-							月费
-							<select name="" id="yf">
-								<option value="">38元</option>
-								<option value="">48元</option>
-								<option value="">58元</option>
-								<option value="">88元</option>
-								<option value="">138元</option>
-								<option value="">158元</option>
-								<option value="">238元</option>
-								<option value="">268元</option>
-								<option value="">338元</option>
-								<option value="">588元</option>
-							</select>
-						</li>
-						<li class="fzll">500分钟1G流量</li>
-						<li class="kc">办理变更</li>
-						<li class="hot"><strong>HOT</strong></li>
-						<li class="czk">中国联通199全国不限量 </li>
+				</div>
+				<div class="r_s_f">
+					<ul class="r_f_u">
+						<li><a href="#">秒杀</a></li>
+						<li><a href="#">优惠券</a></li>
+						<li><a href="#">PLUS会员</a></li>
+						<li><a href="#">闪购</a></li>
+						<li>|</li>
+						<li><a href="#">拍卖</a></li>
+						<li><a href="#">京东时尚</a></li>
+						<li><a href="#">京东超市</a></li>
+						<li><a href="#">京东生鲜</a></li>
+						<li>|</li>
+						<li><a href="#">全球购</a></li>
+						<li><a href="#">京东金融</a></li>
 					</ul>
 				</div>
-				</div>
-			</div>
-			
-			<div class="jdjd hide" id="jdjd">
-				<ul>
-					<li id="gnjd">国内/港澳台</li>
-					<li id="cxhd">促销活动</li>
-				</ul>
-				<div class="jd_box">
-					<div class="gnjd show">
-						<ul>
-							<li>
-								<span class="mdd">目的地</span><input type="text" value="北京"/>
-							</li>
-							<li>
-								<span class="rz">入住日期</span><input type="text" value="" />
-							</li>
-							<li>
-								离店日期	<input type="text" value=""/>
-							</li>
-							<li class="jsd"><input type="text" value="酒店/商圈/地标"/></li>
-							<li class="kc">酒店查询</li>
-							<li class="rmjp">订酒店上京东 </li>
-						</ul>
-					</div>
-					<div class="cxhd hide">
-						<span><img src="img/5a4b4f01N0f4c970d.jpg"/></span><span><img src="img/113259177db2af6d.jpg"/></span>
-					</div>
-				</div>
-			</div>
-			
-			</div>
-			
-		</div>
-		<div class="box1_right">
-			<img src="img/35b198d208328962.jpg"/>
-		</div>
-		<div class="nav1 hide">
-			<ul>
-				<li><a href="#">北京</a></li>
-				<li><a href="#">上海</a></li>
-				<li><a href="#">天津</a></li>
-				<li><a href="#">重庆</a></li>
-				<li><a href="#">河北</a></li>
-				<li><a href="#">山西</a></li>
-				<li><a href="#">河南</a></li>
-				<li><a href="#">辽宁</a></li>
-				<li><a href="#">吉林</a></li>
-				<li><a href="#">黑龙江</a></li>
-				<li><a href="#">内蒙古</a></li>
-				<li class="nd1"><a href="#">江苏</a></li>
-				<li><a href="#">山东</a></li>
-				<li><a href="#">安徽</a></li>
-				<li><a href="#">浙江</a></li>
-				<li><a href="#">福建</a></li>
-				<li><a href="#">湖北</a></li>
-				<li><a href="#">湖南</a></li>
-				<li><a href="#">广东</a></li>
-				<li><a href="#">广西</a></li>
-				<li><a href="#">江西</a></li>
-				<li><a href="#">四川</a></li>
-				<li><a href="#">海南</a></li>
-				<li><a href="#">贵州</a></li>
-				<li><a href="#">云南</a></li>
-				<li><a href="#">西藏</a></li>
-				<li><a href="#">陕西</a></li>
-				<li><a href="#">甘肃</a></li>
-				<li><a href="#">青海</a></li>
-				<li><a href="#">宁夏</a></li>
-				<li><a href="#">新疆</a></li>
-				<li><a href="#">港澳</a></li>
-				<li><a href="#">台湾</a></li>
-				<li><a href="#">钓鱼岛</a></li>
-				<li class="nd2"><a href="#">海外</a></li>
-			</ul>
-		</div>
-		<div class="nav2 hide">
-			<div class="nav01">
-				<ul>
-					<li>待处理订单</li>
-					<li class="nv01">消息</li>
-					<li>返修退换货</li>
-					<li class="nv01">我的问答</li>
-					<li>降价商品</li>
-					<li class="nv02">我的关注</li>
-				</ul>
-			</div>
-			<div class="nav02">
-				<ul>
-					<li>我的京豆</li>
-					<li>我的优惠卷</li>
-					<li>我的白条</li>
-					<li>我的理财</li>
-				</ul>
 			</div>
 		</div>
-		<div class="nav3 hide">
-			<ul>
-				<li>企业购</li>
-				<li>商用场景馆</li>
-				<li>工业品</li>
-				<li>礼品卡</li>
-			</ul>
-		</div>
-		<div class="nav4 hide">
-			<div class="n4v1">
-				<p>客户</p>
-				<ul>
-					<li>帮助中心</li>
-					<li>售后服务</li>
-					<li>在线客服</li>
-					<li>意见建议</li>
-					<li>电话客服</li>
-					<li>客服邮箱</li>
-					<li>金融资讯</li>
-					<li>全球售客服</li>
-				</ul>
-			</div>
-			<hr />
-			<div class="n4v2">
-				<p>商户</p>
-				<ul>
-					<li>合作招商</li>
-					<li>学习中心</li>
-					<li>商家后台</li>
-					<li>京麦工作室</li>
-					<li>商家帮助</li>
-					<li>规则平台</li>
-				</ul>
-			</div>
-		</div>
-		<div class="nmg">
-			<img src="img/jd1.gif" class="nmg1"/>
-		</div>
-		<div class="nodeSmall" id="node_small">
-		    <a href="#" class="n1"></a>
-		    <div class="erweima hide" id="er">
-		      <img src="img/456.png" alt=""/>
-		    </div>
-    	</div>
-		<div class="nav5 hide">
-			<div class="n_left">
-				<h4>特色主题</h4>
-				<ul>
-					<li>京东试用</li>
-					<li class="nl01">京东金融</li>
-					<li class="nl1">全球售</li>
-					<li>国际站</li>
-					<li class="nl02">京东会员</li>
-					<li class="nl2">京东预售</li>
-					<li>买什么</li>
-					<li class="nl03">俄语站</li>
-					<li class="nl3">装机大师</li>
-					<li>0元评测</li>
-					<li class="nl04">定期送</li>
-					<li class="nl4">港澳售</li>
-					<li>优惠卷</li>
-					<li class="nl05">秒杀</li>
-					<li class="nl5">闪购</li>
-					<li>印尼站</li>
-					<li>京东金融科技</li>
-					<li>In货推存</li>
-					<li>陪伴计划</li>
-					<li class="nl06">出海招商</li>
-				</ul>
-			</div>
-			<div class="n_center">
-				<h4>行业频道</h4>
-				<ul>
-					<li>手机</li>
-					<li class="nc1">智能数码</li>
-					<li>玩3C</li>
-					<li class="nc2">电脑办公</li>
-					<li>家用电器</li>
-					<li class="nc3">京东智能</li>
-					<li>服装城</li>
-					<li class="nc4">京东生鲜</li>
-					<li>家装城</li>
-					<li class="nc5">母婴</li>
-					<li>食品</li>
-					<li class="nc6">农资频道</li>
-					<li>整车</li>
-					<li class="nc7">图书</li>
-					<li>京东元器件</li>
-				</ul>
-			</div>
-			<div class="n_right1">
-				<h4>生活服务</h4>
-				<ul>
-					<li>京东众筹</li>
-					<li class="nc01">白条</li>
-					<li>京东金融App</li>
-					<li>京东小金库</li>
-					<li>理财</li>
-					<li class="nc02">话费</li>
-					<li>水电焊</li>
-					<li class="nc03">彩票</li>
-					<li>旅行</li>
-					<li class="nc04">机票酒店</li>
-					<li>电影票</li>
-					<li class="nc05">京东到家</li>
-					<li>游戏</li>
-				</ul>
-			</div>
-			<div class="n_right2">
-				<h4>更多精选</h4>
-				<ul>
-					<li>合作招商</li>
-					<li class="nc001">京东通信</li>
-					<li>京东E卡</li>
-					<li class="nc002">企业采购</li>
-					<li>服务市场</li>
-					<li class="nc003">办公生活馆</li>
-					<li>乡村招募</li>
-					<li class="nc004">校园加盟</li>
-					<li>京友邦</li>
-					<li class="nc005">京东社区</li>
-					<li>游戏社区</li>
-					<li class="nc006">知识产权维权</li>
-				</ul>
-			</div>
-		</div>
-		
 	</div>
 	
-	<div class="box1">
-		<div class="box1_left" id="box1_left">
-			<div class="left_zt">
-				<h3>京东秒杀</h3>
-				<p class="left_flash">FLASH DEALS</p>
-				<img src="img/sd.png" class="left_sd"/>
-				<span class="left_jssj">本场距离结束还剩</span>
+	<!-- 内容 -->
+	<div class="fs">
+		<div class="fs_center">
+			<!-- 内容左半部分 -->
+			<div class="fs_l">
+				<ul>
+					<li class="fs_li1">
+						<a href="#">家用电器</a>
+						<div class="fs_nr1">
+							<div class="fs_nr_l">
+								<div class="fnl_top">
+									<ul>
+										<li>家电馆></li>
+										<li>家电专卖店></li>
+										<li>家电服务></li>
+										<li>企业采购></li>
+										<li>商用电器></li>
+									</ul>
+								</div>
+								<div class="fnl_m">
+									<ul>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+										<li>
+											<a href="#" class="fnl_m_r">电视 ></a><span></span>
+											<a href="#">超薄电视</a><span></span>
+											<a href="#">全面屏电视</a><span></span>
+											<a href="#">智能电视</a><span></span>
+											<a href="#">OLED电视</a><span></span>
+											<a href="#">4K超清电视</a><span></span>
+											<a href="#">55英寸</a><span></span>
+											<a href="#">65英寸</a><span></span>
+											<a href="#">电视配件</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="fs_nr_r">
+								<img src="img/51kh1.jpg" alt="">
+								<img src="img/51kh1.jpg" alt="">
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">手机</a><span>/</span>
+						<a href="#">运营商</a><span>/</span>
+						<a href="#">数码</a>
+					</li>
+					<li>
+						<a href="#">电脑</a><span>/</span>
+						<a href="#">办公</a>
+					</li>
+					<li>
+						<a href="#">家居</a><span>/</span>
+						<a href="#">家具</a><span>/</span>
+						<a href="#">家装</a><span>/</span>
+						<a href="#">厨具</a>
+					</li>
+					<li>
+						<a href="#">男装</a><span>/</span>
+						<a href="#">女装</a><span>/</span>
+						<a href="#">童装</a><span>/</span>
+						<a href="#">内衣</a>
+					</li>
+					<li>
+						<a href="#">美妆</a><span>/</span>
+						<a href="#">个护清洁</a><span>/</span>
+						<a href="#">宠物</a>
+					</li>
+					<li>
+						<a href="#">女鞋</a><span>/</span>
+						<a href="#">箱包</a><span>/</span>
+						<a href="#">钟表</a><span>/</span>
+						<a href="#">珠宝</a>
+					</li>
+					<li>
+						<a href="#">男鞋</a><span>/</span>
+						<a href="#">运动</a><span>/</span>
+						<a href="#">户外</a>
+					</li>
+					<li>
+						<a href="#">房产</a><span>/</span>
+						<a href="#">汽车</a><span>/</span>
+						<a href="#">汽车用品</a>
+					</li>
+					<li>
+						<a href="#">母婴</a><span>/</span>
+						<a href="#">玩具乐器</a>
+					</li>
+					<li>
+						<a href="#">食品</a><span>/</span>
+						<a href="#">酒类</a><span>/</span>
+						<a href="#">生鲜</a><span>/</span>
+						<a href="#">特产</a>
+					</li>
+					<li>
+						<a href="#">艺术</a><span>/</span>
+						<a href="#">礼品鲜花</a><span>/</span>
+						<a href="#">农资绿植</a>
+					</li>
+					<li>
+						<a href="#">医药保健</a><span>/</span>
+						<a href="#">计生情趣</a>
+					</li>
+					<li>
+						<a href="#">图书</a><span>/</span>
+						<a href="#">文娱</a><span>/</span>
+						<a href="#">电子书</a>
+					</li>
+					<li>
+						<a href="#">机票</a><span>/</span>
+						<a href="#">酒店</a><span>/</span>
+						<a href="#">旅游</a><span>/</span>
+						<a href="#">生活</a>
+					</li>
+					<li>
+						<a href="#">理财</a><span>/</span>
+						<a href="#">众筹</a><span>/</span>
+						<a href="#">白条</a><span>/</span>
+						<a href="#">保险</a>
+					</li>
+					<li>
+						<a href="#">安装</a><span>/</span>
+						<a href="#">维修</a><span>/</span>
+						<a href="#">清洗</a><span>/</span>
+						<a href="#">二手</a>
+					</li>
+					<li>
+						<a href="#">工业品</a>
+					</li>
+				</ul>
 			</div>
-			<div class="sjhk">
-				<div class="left_sjhk1"><span class="left_time1" id="left_time1"></span></div>
-				<div class="left_sjhk2"><span class="left_time2" id="left_time2"></span></div>
-				<div class="left_sjhk3"><span class="left_time3" id="left_time3"></span></div>
+			
+			<!-- 内容轮播图部分 -->
+			<div class="ulAll" id="ulAll">
+				<div class="ulAll_top" id="ulAll_top">
+					<ul id="ul">
+						<li><img src="img/t1.jpg" width="590"/></li>
+						<li><img src="img/t2.jpg" width="590"/></li>
+						<li><img src="img/t3.jpg" width="590"/></li>
+						<li><img src="img/t4.jpg" width="590"/></li>
+						<li><img src="img/t5.jpg" width="590"/></li>
+						<li><img src="img/t6.jpg" width="590"/></li>
+						<li><img src="img/t7.jpg" width="590"/></li>
+						<li><img src="img/t8.jpg" width="590"/></li>
+					</ul>
+					<ol>
+						
+					</ol>
+					<div id="arr">
+	            		<span id="left"><</span>
+	            		<span id="right">></span>
+	        		</div>
+				</div>
+			</div>
+			
+			<!-- 内容右图部分 -->
+			<div class="fs_r1">
+				<div class="fs_t1">
+					<a href="#">
+						<img src="img/r1.jpg" alt="">
+					</a>
+				</div>
+				<div class="fs_t2">
+					<a href="#">
+						<img src="img/r2.jpg" alt="">
+					</a>
+				</div>
+				<div class="fs_t3">
+					<a href="#">
+						<img src="img/r3.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			
+			<!-- 内容登录部分 -->
+			<div class="fs_r2">
+				<div class="fsd">
+					<div class="fs_r2_t">
+						<div class="frt2_t">
+							<img src="img/qtx.jpg" alt="" class="frt2t_img"> 
+						</div>
+						<div class="frt2_m">
+							<p class="frt2_m_t">Hi~欢迎来到京东!</p>
+							<p class="frt2_m_m">
+								<a href="#">登录</a>
+								<a href="#">注册</a>
+							</p>
+						</div>
+						<div class="frt2_f">
+							<a href="#" class="frt2_f_l">新人福利</a>
+							<a href="#" class="frt2_f_r">PLUS会员</a>
+						</div>
+					</div>
+
+					<div class="fs_r2_m">
+						<div class="fsr2m_d">
+							<h5>京东快报</h5>
+							<a href="#">更多></a>
+						</div>
+						<ul class="fsr2m_ul">
+							<li>
+								<a href="#">
+									<span>热议</span>
+									<p>华为宣布5G收费标准,多国运营商表示接受不了</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>热议</span>
+									<p>红米旗舰来了：4200mAh配骁龙855让米9心慌慌！</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>热议</span>
+									<p>买手机是选64G，还是128G？听听手机店老板怎么说</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>HOT</span>
+									<p>电动车又吃香了！新型充电器来了！</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="fs_r2_fjx"></div>
+					
+					<div class="fs_r2_f">
+						<div class="fsr2f_d">
+							<ul class="fsr2f_u" id="fsr2f_u">
+								<li>
+									<a href="#">
+										<i class="u_hf" id="u_hf"></i>
+										<span class="d_hf"  id="d_hf">话费</span>
+									</a>
+									<a href="#">
+										<i class="u_jp" id="u_jp"></i>
+										<span class="d_jp">机票</span>
+									</a>
+									<a href="#">
+										<i class="u_jd" id="u_jd"></i>
+										<span class="d_jd">酒店</span>
+									</a>
+									<a href="#">
+										<i class="u_yx" id="u_yx"></i>
+										<span class="d_yx">游戏</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="u_cp"></i>
+										<span>彩票</span>
+									</a>
+									<a href="#">
+										<i class="u_jyk"></i>
+										<span>加油卡</span>
+									</a>
+									<a href="#">
+										<i class="u_dyp"></i>
+										<span>电影票</span>
+									</a>
+									<a href="#">
+										<i class="u_hcp"></i>
+										<span>火车票</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="u_zc"></i>
+										<span>众筹</span>
+									</a>
+									<a href="#">
+										<i class="u_lc"></i>
+										<span>理财</span>
+									</a>
+									<a href="#">
+										<i class="u_lpk"></i>
+										<span>礼品卡</span>
+									</a>
+									<a href="#">
+										<i class="u_bt"></i>
+										<span>白条</span>
+									</a>
+								</li>
+							</ul>
+							<p id="fsr2fd_p">X</p>
+
+							<!-- 话费 -->
+							<div class="fs_z1" id="fs_z1">
+								<div class="fsz_l">
+									<div class="fsz_l1">
+										<a href="#" class="fszl1_hf" id="fszl1_hf">话费充值</a>
+										<a href="#" class="fszl1_ll">流量充值</a>
+										<a href="#" class="fszl1_tc">套餐变更</a>
+									</div>
+
+									<!-- 话费充值 -->
+									<div class="hfcz">
+										<div class="fsz_l2">
+											<label>号码</label>
+											<input type="text"placeholder="移动/联通/电信">
+											<label>面值</label>
+											<select>
+												<option value="10">10元</option>
+												<option value="20">20元</option>
+												<option value="30">30元</option>
+												<option value="40">40元</option>
+												<option value="50">50元</option>
+											</select>
+										</div>
+										<div class="fsz_l3">
+											<h6>￥98.0-￥100.0</h6>
+											<div class="fl3_a">
+												<a href="#"><span>快速充值</span></a>
+												<a href="#"><h7>抢90减20元话费券</h7></a>
+											</div>
+										</div>
+									</div>
+
+									<!-- 流量充值 -->
+									<div class="llcz">
+										<div class="llcz_l2">
+											<label>号码</label>
+											<input type="text"placeholder="移动/联通/电信">
+											<label class="lab">流量</label>
+											<select class="sel">
+												<option value="全国">全国</option>
+												<option value="省内">省内</option>
+											</select>
+											<select class="sel2">
+												<option value="50">50M</option>
+												<option value="100">100M</option>
+												<option value="200">200M</option>
+												<option value="300">300M</option>
+												<option value="500">500M</option>
+											</select>
+										</div>
+										<div class="llcz_l3">
+											<h6>￥7.5-￥10.0</h6>
+											<div class="llcz_a">
+												<a href="#"><span>快速充值</span></a>
+												<a href="#"><h7>App Store充值卡</h7></a>
+											</div>
+										</div>
+									</div>
+
+									<!-- 套餐变更 -->
+									<div class="tcbg">
+										<div class="tcbg_l2">
+											<label>号码</label>
+											<input type="text"placeholder="移动/联通/电信">
+											<label>月费</label>
+											<select>
+												<option value="10">10元</option>
+												<option value="20">20元</option>
+												<option value="30">30元</option>
+												<option value="40">40元</option>
+												<option value="50">50元</option>
+											</select>
+										</div>
+										<div class="fsz_l3">
+											<h6>500分钟1G流量</h6>
+											<div class="fl3_a">
+												<a href="#"><span>办理变更</span></a>
+												<a href="#"><h7>中国联通199全国不限量</h7></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="fsz_m">
+			
+								</div>
+								<div class="fsz_r">
+			
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		
-		<div class="box1_center" id="box1_center">
-			<div class="center_t1" id="center_t1">
-				<ul id="center_t1_ul">
-					<li>
-						<a href="#">
-							<div class="t1_lhdn">
-								<img src="img/59f98e92N14a8d11a.jpg"/>
-								<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
-							</div>
-							<div>
-								<span class="sp1">￥9.90</span>
-								<span class="sp2">￥19.50</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div>
-								<img src="img/59de1802Nacae2eb2.jpg"/>
-								<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
-							</div>
-							<div>
-								<span class="sp3">￥9.90</span>
-								<span class="sp4">￥19.50</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div>
-								<img src="img/7595fd60c9d211e2.jpg"/>
-								<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
-							</div>
-							<div>
-								<span class="sp5">￥9.90</span>
-								<span class="sp6">￥19.50</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div>
-								<img src="img/5acd7155Nea40dfd7.jpg"/>
-								<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
-							</div>
-							<div>
-								<span class="sp7">￥9.90</span>
-								<span class="sp8">￥19.50</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div>
-								<img src="img/80dd78b7148e97fc.jpg"/>
-								<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
-							</div>
-							<div>
-								<span class="sp9">￥9.90</span>
-								<span class="sp10">￥19.50</span>
-							</div>
-						</a>
-					</li>
-				</ul>
+		<div class="fs_c2">
+			<!-- 倒计时 -->
+			<div class="fc2_left" id="fc2_left">
+				<div class="left_zt">
+					<h3>京东秒杀</h3>
+					<p class="left_flash">FLASH DEALS</p>
+					<img src="img/sd.png" class="left_sd"/>
+					<span class="left_jssj">本场距离结束还剩</span>
+				</div>
+				<div class="sjhk">
+					<div class="left_sjhk1">
+						<span class="left_time1" id="left_time1"></span>
+					</div>
+					<div class="left_sjhk2">
+						<span class="left_time2" id="left_time2"></span>
+					</div>
+					<div class="left_sjhk3">
+						<span class="left_time3" id="left_time3"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="fc2_m" id="fc2_m">
+				<div class="fc2m_d" id="fc2m_d">
+					<ul id="fc2md_u">
+						<li class="fc2mdu_li">
+							<a href="#">
+								<div class="t1_lhdn">
+									<img src="img/59f98e92N14a8d11a.jpg"/>
+									<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+								</div>
+								<div class="t2_lhdn">
+									<span class="sp1">￥9.90</span>
+									<span class="sp2">￥19.50</span>
+								</div>
+							</a>
+						</li>
+						<li class="fc2mdu_li">
+							<a href="#">
+								<div class="t1_lhdn">
+									<img src="img/59de1802Nacae2eb2.jpg"/>
+									<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+								</div>
+								<div class="t2_lhdn">
+									<span class="sp1">￥9.90</span>
+									<span class="sp2">￥19.50</span>
+								</div>
+							</a>
+						</li>
+						<li class="fc2mdu_li">
+							<a href="#">
+								<div class="t1_lhdn">
+									<img src="img/7595fd60c9d211e2.jpg"/>
+									<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+								</div>
+								<div class="t2_lhdn">
+									<span class="sp1">￥9.90</span>
+									<span class="sp2">￥19.50</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="t1_lhdn">
+									<img src="img/5acd7155Nea40dfd7.jpg"/>
+									<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+								</div>
+								<div class="t2_lhdn">
+									<span class="sp1">￥9.90</span>
+									<span class="sp2">￥19.50</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="fc2_r">
+				<div class="fc2r_lb">
+					<ul id="fclb_ul">
+						<li>
+							<img src="img/lbr1.jpg" height="275"/>
+						</li>
+						<li>
+							<img src="img/lbr2.jpg" height="275"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="fs_c3">
+			<div class="fsc3_t">
+				<div class="fs3t_d">
+					<h1><span class="spn1"></span>还没逛够<span class="spn2"></span></h1>
+				</div>
+				<div class="fc3_m" id="fc2_m">
+					<div class="fc3m_d" id="fc2m_d">
+						<ul id="fc3md_u">
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59f98e92N14a8d11a.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59de1802Nacae2eb2.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/7595fd60c9d211e2.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59f98e92N14a8d11a.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/5acd7155Nea40dfd7.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="fsc3_t1">
+				<div class="fc3_m" id="fc2_m">
+					<div class="fc3m_d" id="fc2m_d">
+						<ul id="fc3md_u">
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59f98e92N14a8d11a.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59de1802Nacae2eb2.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/7595fd60c9d211e2.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59f98e92N14a8d11a.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/5acd7155Nea40dfd7.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="fsc3_t2">
+				<div class="fc3_m" id="fc2_m">
+					<div class="fc3m_d" id="fc2m_d">
+						<ul id="fc3md_u">
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59f98e92N14a8d11a.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59de1802Nacae2eb2.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/7595fd60c9d211e2.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/59f98e92N14a8d11a.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="t1_lhdn">
+										<img src="img/5acd7155Nea40dfd7.jpg"/>
+										<p>老板（Robam）万有吸力 侧吸式抽油烟机 燃气灶具套装 25A7+56B0（天然气）</p>
+									</div>
+									<div class="t2_lhdn">
+										<span class="sp1">￥9.90</span>
+										<span class="sp2">￥19.50</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	
 </div>
 </body>
+<!-- 懒加载 -->
+<script>
+	$("img.lazy").lazyload({
+		placeholder : "images/loading.gif",
+		
+		effect: "fadeIn", // 载入使用何种效果
+		    // effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+		
+		threshold: 200, // 提前开始加载
+		    // threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉
+	});
+</script>
 </html>
 <!---->

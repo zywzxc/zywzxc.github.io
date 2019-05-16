@@ -1,0 +1,120 @@
+(function($){
+	$.fn.lazyload=function(options){
+		varsettings={threshold:0,failurelimit:0,event:"scroll",effect:"show",container:window};
+		
+		if(options){
+			$.extend(settings,options);
+		}
+
+		varelements=this;
+		
+		if("scroll"==settings.event){
+			$(settings.container).bind("scroll",function(event){
+					varcounter=0;
+					elements.each(function(){
+						if($.abovethetop(this,settings)||$.leftofbegin(this,settings)){
+
+						}elseif(!$.belowthefold(this,settings)&&!$.rightoffold(this,settings)){
+							$(this).trigger("appear");
+						}else{
+							if(counter++>settings.failurelimit){
+								returnfalse;
+							}
+						}
+					});
+				vartemp=$.grep(elements,function(element){
+					return!element.loaded;
+				});
+				elements=$(temp);
+			});
+		}
+
+this.each(function(){
+	varself=this;
+
+	if(undefined==$(self).attr("original")){
+		$(self).attr("original",$(self).attr("src"));
+	}
+
+	if("scroll"!=settings.event||undefined==$(self).attr("src")||settings.placeholder==$(self).attr("src")||($.abovethetop(self,settings)||$.leftofbegin(self,settings)||$.belowthefold(self,settings)||$.rightoffold(self,settings))){
+		if(settings.placeholder){
+			$(self).attr("src",settings.placeholder);
+		}else{
+			$(self).removeAttr("src");
+		}
+
+		self.loaded=false;
+		}else{
+			self.loaded=true;
+		}
+
+	$(self).one("appear",function(){
+		if(!this.loaded){
+			$("<img/>").bind("load",function(){
+				$(self).hide().attr("src",$(self).attr("original"))
+
+		[settings.effect](settings.effectspeed);
+
+		self.loaded=true;
+
+		}).attr("src",$(self).attr("original"));
+
+		};
+	});
+
+	if("scroll"!=settings.event){
+		$(self).bind(settings.event,function(event){
+			if(!self.loaded){
+				$(self).trigger("appear");
+			}
+		});
+	}
+});
+
+	$(settings.container).trigger(settings.event);returnthis;
+
+};
+
+$.belowthefold=function(element,settings){
+	if(settings.container===undefined||settings.container===window){
+		varfold=$(window).height()+$(window).scrollTop();
+	}else{
+		varfold=$(settings.container).offset().top+$(settings.container).height();
+	}
+
+	returnfold<=$(element).offset().top-settings.threshold;
+};
+
+$.rightoffold=function(element,settings){
+	if(settings.container===undefined||settings.container===window){
+		varfold=$(window).width()+$(window).scrollLeft();
+	}else{
+		varfold=$(settings.container).offset().left+$(settings.container).width();
+	}
+
+	returnfold<=$(element).offset().left-settings.threshold;
+};
+
+$.abovethetop=function(element,settings){
+	if(settings.container===undefined||settings.container===window){
+		varfold=$(window).scrollTop();
+	}else{
+			varfold=$(settings.container).offset().top;
+		}
+
+	returnfold>=$(element).offset().top+settings.threshold+$(element).height();
+};
+
+$.leftofbegin=function(element,settings){
+	if(settings.container===undefined||settings.container===window){
+		varfold=$(window).scrollLeft();
+	}else{
+			varfold=$(settings.container).offset().left;
+		}
+
+	returnfold>=$(element).offset().left+settings.threshold+$(element).width();
+};
+
+	$.extend($.expr[':'],{"below-the-fold":"$.belowthefold(a,{threshold:0,container:window})","above-the-fold":"!$.belowthefold(a,{threshold:0,container:window})","right-of-fold":"$.rightoffold(a,{threshold:0,container:window})","left-of-fold":"!$.rightoffold(a,{threshold:0,container:window})"});
+
+})(jQuery);

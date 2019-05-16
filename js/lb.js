@@ -97,4 +97,5 @@ $(function(){
 	spanArr[1].onclick=function(){
 		autoPlay();
 	}
+
 })
